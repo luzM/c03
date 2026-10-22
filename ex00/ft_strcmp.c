@@ -6,7 +6,7 @@
 /*   By: lmartiro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 18:36:25 by lmartiro          #+#    #+#             */
-/*   Updated: 2026/10/21 18:47:10 by lmartiro         ###   ########.fr       */
+/*   Updated: 2026/10/22 16:44:31 by lmartiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@ int	ft_strcmp(char *st1, char *st2)
 {
 	while ((*st1 != '\0') || (*st2 != '\0'))
 	{
-		if (*st1 != *st2)
-			return (0);
+		if (((unsigned char)*st1 < (unsigned char)*st2)
+			|| ((unsigned char)*st1 > (unsigned char)*st2))
+			return ((unsigned char)*st1 - (unsigned char)*st2);
 		st1++;
 		st2++;
 	}
-	return (1);
+	return (0);
 }
 /*
 int	main(void)
@@ -35,5 +36,6 @@ int	main(void)
 	text3 = "aaaa";
 	printf("%d\n", ft_strcmp(text1, text2));
 	printf("%d\n", ft_strcmp(text3, text1));
+	printf("%d\n", ft_strcmp(text2, text3));
 	return (0);
 }*/
