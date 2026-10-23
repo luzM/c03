@@ -6,7 +6,7 @@
 /*   By: lmartiro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 16:44:58 by lmartiro          #+#    #+#             */
-/*   Updated: 2026/10/22 16:58:22 by lmartiro         ###   ########.fr       */
+/*   Updated: 2026/10/23 01:38:38 by lmartiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	start = dest;
 	while (*dest != '\0')
 		dest++;
-	while ((i < nb) && (*src != '\0'))
+	while ((i < nb) && (src[i] != '\0'))
 	{
 		dest[i] = src[i];
 		i++;
